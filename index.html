@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="jingxiApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/ionic.css"/>
+    <link rel="stylesheet" href="css/yingpinhui.css"/>
+    <script src="js/ionic.bundle.js"></script>
+    <script src="js/jingxi.js"></script>
+    <title></title>
+</head>
+<body ng-controller="parentCtrl">
+<div ui-view></div>
+
+<ion-tabs class="tabs-icon-top">
+    <ion-tab icon="ion-home" ng-click="jump('home')" title="首页"></ion-tab>
+    <ion-tab icon="ion-person" ng-click="jump('share')" title="社区"></ion-tab>
+    <!--<ion-tab icon="ion-person" ng-click="jump('credits')" title="积分"></ion-tab>-->
+    <!--<ion-tab icon="ion-bag"-->
+             <!--on-select="jump('cart')"-->
+             <!--badge="data.totalNumInCart"-->
+             <!--badge-style="badge-assertive"-->
+             <!--title="购物车"></ion-tab>-->
+    <ion-tab icon="ion-ios-cart" ng-click="jumpToCart('cart')" title="购物车"badge="data.totalNumInCart"badge-style="badge-assertive"></ion-tab>
+    <ion-tab icon="ion-person" ng-click="jump('own')" title="我的"></ion-tab>
+</ion-tabs>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<ion-header-bar>
+    <button class="button ion-arrow-left-a"></button>
+    <h1 class="title">购物车</h1>
+</ion-header-bar>
+<ion-content class="has-footer">
+    <ion-slide-box slide-interval="1000" does-continue="true" auto-play="true">
+        <ion-slide>
+            <div class="box blue"><img class="full-image"ng-src="img/{{product.img1}}" alt=""/></div>
+        </ion-slide>
+        <ion-slide>
+            <div class="box yellow"><img class="full-image"ng-src="img/{{product.img2}}" alt=""/></div>
+        </ion-slide>
+        <ion-slide>
+            <div class="box yellow"><img class="full-image"ng-src="img/{{product.img3}}" alt=""/></div>
+        </ion-slide>
+        <ion-slide on-slide-changed="slideHasChanged(index)">
+            <div class="box pink"><img class="full-image"ng-src="img/{{product.img4}}" alt=""/></div>
+        </ion-slide>
+    </ion-slide-box>
+    <div class="detail-introduce my-bg">
+        <h5>{{product.name}}</h5>
+        <p>{{product.detail}}</p>
+            <!--<span>¥138.00</span>-->
+        <p class="assertive">
+            <span>{{product.price | currency:'¥'}}</span>
+            <button class="button button-small button-clear button-assertive icon ion-ios-cart rt"
+                    ng-click="addToCart(product.pid)"></button>
+        </p>
+        <!--<div class="row my-size">-->
+            <!--<div class="col"><span>快递:包邮</span></div>-->
+            <!--<div class="col"><span>库存:34</span></div>-->
+            <!--<div class="col"><span>销量:12件</span></div>-->
+            <!--<div class="col"><span>广州市</span></div>-->
+        <!--</div>-->
+    </div>
+    <!--<div class="detail-service my-bg">-->
+        <!--<div class="row">-->
+            <!--<div class="col-25">-->
+                <!--<span><img src="img/right.png" alt=""/></span>-->
+                <!--<span>正品保证</span>-->
+            <!--</div>-->
+            <!--<div class="col-25">-->
+                <!--<span><img src="img/right.png" alt=""/></span>-->
+                <!--<span>保修</span>-->
+            <!--</div>-->
+            <!--<div class="col-25">-->
+                <!--<span><img src="img/right.png" alt=""/></span>-->
+                <!--<span>7天退换</span>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="detail-choice my-bg">-->
+        <!--<span class="">请选择容量.颜色分类凳</span>-->
+        <!--<span class="ion-ios-arrow-right rt"></span>-->
+    <!--</div>-->
+    <!--<div class="detail-sales my-bg">-->
+        <!--<div class="logo-pic">-->
+            <!--<img src="img/logo.jpeg"class="" alt=""/>-->
+            <!--<span>赢品会</span>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="detail-parameter my-bg">-->
+        <!--<h4>详细参数</h4>-->
+        <!--<p><span>品牌</span><span>迪士尼</span></p>-->
+
+        <!--<p>-->
+            <!--<span>承重</span>-->
+            <!--<span>150kg</span>-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--<span>材质</span>-->
+            <!--<span>皮革</span>-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--<span>凳柱材质</span>-->
+            <!--<span>木</span>-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--<span>容量</span>-->
+            <!--<span>47</span>-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--<span>颜色分类</span>-->
+            <!--<span>米奇粉色,米奇红色,米奇黄色......</span>-->
+        <!--</p>-->
+    <!--</div>-->
+    <!--<div class="detail-pic">-->
+        <!--&lt;!&ndash;<h4>产品图片</h4>&ndash;&gt;-->
+        <!--<img src="img/d_sp_05.png" class="full-image" alt=""/>-->
+        <!--<img src="img/d_sp_06.png" class="full-image" alt=""/>-->
+        <!--<img src="img/d_sp_07.png" class="full-image" alt=""/>-->
+    <!--</div>-->
+</ion-content>

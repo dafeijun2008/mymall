@@ -1,0 +1,37 @@
+<ion-header-bar class="assertive-bg">
+    <button class="button button-clear button-light ion-arrow-left-a"ui-sref="home"></button>
+    <h1 class="title">购物车</h1>
+    <button class="button button-clear button-light"ng-click="editClick()">{{edit}}</button>
+</ion-header-bar>
+<ion-content class="has-footer">
+    <div class="list">
+        <div class="row" ng-repeat="pro in cartProduct">
+            <div class="col col-10" ng-if="deleteBtn">
+               <h4 class="ion-minus-circled assertive" ng-click="updateClick(pro.did,'delete',userId,pro.count)"></h4>
+            </div>
+            <div class="col">
+                <img ng-src="img/{{pro.img1}}" class="full-image" alt=""/>
+            </div>
+            <div class="col" ng-show="!editEnable">
+                <h5>{{pro.name}}</h5>
+                <p class="assertive">{{pro.price}}</p>
+            </div>
+            <div class="col" >
+                <button ng-click="updateClick(pro.did,'reduce',userId,pro.count)">-</button>
+                <span>{{pro.count}}</span>
+                <button ng-click="updateClick(pro.did,'add',userId,pro.count)">+</button>
+            </div>
+        </div>
+    </div>
+    <div class="list list-inset" ng-if="cartContent">
+        <p>
+            <img  class="img-responsive" src="img/shop1.png" alt=""/>
+        </p>
+        <p>购物空空如也.抢购抢购..........</p>
+    </div>
+    <div class="list list-inset text-right">
+        <h4>总计:  <span class="assertive">{{countPrice}}</span></h4>
+        <button  ng-click="jumpToOrder()"
+                class="button button-balanced  button-block">确定下单</button>
+    </div>
+</ion-content>

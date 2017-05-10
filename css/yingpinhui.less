@@ -1,0 +1,274 @@
+body{
+  //background:#f5f5f5;
+  //font-family: "微软雅黑";
+  color:#666;
+  font-size:0.8rem;
+}
+a{
+  text-decoration: none;
+  color:#666;
+}
+.clear{clear:both;}
+.my-size{
+  font-size: 0.8rem;
+  color:#666;
+}
+.my-bg{background:#fff;}
+.rt{float:right;}
+.lf{float:left;}
+.centered{
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.img-responsive{
+  display:inline-block;
+  max-width: 100%;
+  height: auto;
+  //margin:0 auto;
+}
+.pro-nav{
+  p{
+    font-size:0.8rem;
+  }
+  .text-center{
+    background:#fff;
+    border-radius:8%;
+  }
+}
+.header{
+  background:#fff;
+  height:40px;
+  line-height:40px;
+  b{
+    display: inline-block;
+    padding:5px;
+    background:#000;
+  }
+  .list{
+    a{
+      margin:5px 0;
+      border-radius:5%;
+      img{
+        border-bottom:1px solid #e7e7e7;
+      }
+      h3{
+        margin:15px 0;
+      }
+      p{
+        span:last-child{
+          color:red;
+          font-size:1.5em;
+          //border:1px solid red;
+          //text-align:center;
+          //line-height:20px;
+          //height:20px;
+          //width:20px;
+          //border-radius:50%;
+        }
+      }
+    }
+  }
+}
+//home页面
+#my-Home{
+  #search-input{
+    position:fixed;
+    left:5%;
+    width:90%;
+    margin-top:0.3rem;
+    border-radius:0.2rem;
+    height:1.5rem;
+    background:rgba(254,254,254,0.5);
+    color:black;
+  }
+}
+//detail页面
+.detail-service {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 0.8rem;
+}
+.detail-choice{
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  margin: 10px 0;
+  padding:5px;
+}
+.detail-sales{
+
+ .logo-pic{
+   position:relative;
+   span{
+     position:absolute;
+     left:60px;
+     top:20px;
+     font-size:1.5em;
+     font-weight:bold;
+   }
+ }
+}
+.detail-parameter{
+  p{
+    padding:10px;
+    border-bottom:1px solid #e6e6e6;
+    span:first-child{
+      display:inline-block;
+      width:100px;
+    }
+  }
+}
+//community页面
+.community{
+  padding:1.5rem 1rem;
+  border-bottom: 1px solid #e6e6e6;
+  .community-list{
+    >span{
+      font-size:0.9rem;
+    }
+    img{
+      border-radius:50%;
+      width:2.8rem;
+      height:2.8rem;
+    }
+  }
+  .community-msg{
+   i{font-size:1.4rem;}
+  }
+}
+//community页面结束
+//own页面
+.user-head{
+  .user-bg{
+    position:relative;
+    >div{
+      position:absolute;
+      text-align: center;
+      width:5rem;
+      height:7rem;
+      top:30%;
+      left:42%;
+      img{
+        width:5rem;
+        height:5rem;
+        border-radius:50%;
+      }
+      p{
+        margin:0 auto;
+        color:#fff;
+        font-size:1rem;
+      }
+    }
+  }
+  .user-order{
+    a{
+      position:relative;
+      display:block;
+      line-height:2.2rem;
+      padding-left:2.5rem;
+      >img{
+        width:1.5rem;
+        height:1.5rem;
+        position:absolute;
+        top:0.3rem;
+        left:0.5rem;
+      }
+    }
+  }
+}
+.user-nav{
+  border-top:1px solid #e6e6e6;
+  padding-top:10px;
+  a{
+    display:initial;
+    width:20%;
+    text-align:center;
+    overflow:hidden;
+    font-size:0.75rem;
+    color:#737373;
+    float:left;
+    i{
+      display:inherit !important;
+      margin:0 auto;
+      height:30px;
+      width:30px;
+      font-size:30px;
+      color:#ED413E;
+    }
+  }
+}
+.user-list {
+  margin-top:5px;
+  background:#fff;
+  div.row{
+    border-top:1px solid #e6e6e6;
+  }
+}
+//own页面结束
+//login页面
+#login-box{
+  background:#fff;
+  text-align:center;
+  >div.input-list{
+    border-bottom:1px solid #e7e7e7;
+    input{
+      text-align:center;
+      margin-left:20%;
+      background:rgba(254,254,254,0);
+      width:60%;
+      font-size:1rem;
+    }
+  }
+  .btn{
+    width:100%;
+    height:2.2rem;
+    border:0;
+    background:#ff3600;
+    color:#fff;
+    margin:0.5rem 0;
+    font-size:1rem;
+    border-radius:0.2rem;
+  }
+  .login-or{
+    border-bottom:1px solid #ddd;
+    position:relative;
+    margin:0.5rem 0;
+    >p{
+      position:absolute;
+      background:#fff;
+      width:2rem;
+      left:45%;
+      top:-1rem;
+      font-size:1rem;
+    }
+  }
+  .login-logo{
+    >div{
+      text-align: center;
+      >div{
+        width:2.2rem;
+        height:2.2rem;
+        text-align: center;
+        border-radius:50%;
+        line-height:3rem;
+        margin:0 auto;
+        >img{
+          width:1.5rem;
+          height:1.5rem;
+          border-radius:50%;
+        }
+      }
+    }
+    >div:nth-child(1)>div{
+      border:1px solid #1e425d;
+    }
+    >div:nth-child(2)>div{
+      border:1px solid green;
+    }
+    >div:nth-child(3)>div{
+      border:1px solid #ff3b30;
+    }
+  }
+}
+//login页面结束

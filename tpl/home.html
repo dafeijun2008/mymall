@@ -1,0 +1,126 @@
+
+       <ion-content class="has-footer" id="my-Home">
+           <div class="item item-input "id="search-input">
+               <input type="text" placeholder="搜索..."ng-model="inputTxt.kw"/>
+               <i class="icon ion-search"></i>
+           </div>
+           <ion-slide-box slide-interval="1000" does-continue="true" auto-play="true">
+               <ion-slide>
+                   <div class="box blue"><img class="img-responsive"src="img/banner1.jpg" alt=""/></div>
+               </ion-slide>
+               <ion-slide>
+                   <div class="box yellow"><img class="img-responsive"src="img/banner2.jpg" alt=""/></div>
+               </ion-slide>
+               <ion-slide on-slide-changed="slideHasChanged(index)">
+                   <div class="box pink"><img class="img-responsive"src="img/banner3.jpg" alt=""/></div>
+               </ion-slide>
+           </ion-slide-box>
+           <div class="pro-nav">
+               <div class="row">
+                   <div class="col">
+                       <div class=" item-text-wrap text-center ">
+                           <img class="img-responsive"src="img/nav01.png" alt=""/>
+                           <p>大聚会</p>
+                       </div>
+                   </div>
+                   <div class="col">
+                       <div class=" item-text-wrap text-center">
+                           <img class="img-responsive"src="img/nav02.png" alt=""/>
+                           <p>海外购</p>
+                       </div>
+                   </div>
+                   <div class="col">
+                       <div class=" item-text-wrap text-center">
+                           <img class="img-responsive"src="img/nav03.png" alt=""/>
+                           <p>百货</p>
+                       </div>
+                   </div>
+                   <div class="col">
+                       <div class=" item-text-wrap text-center ">
+                           <img class="img-responsive"src="img/nav04.png" alt=""/>
+                           <p>厂家售</p>
+                       </div>
+                   </div>
+                   <div class="col">
+                       <div class=" item-text-wrap  text-center">
+                           <img class="img-responsive"src="img/nav05.png" alt=""/>
+                           <p>大美食</p>
+                       </div>
+                   </div>
+                   <div class="col">
+                       <div class=" item-text-wrap text-center">
+                           <img class="img-responsive"src="img/nav02.png" alt=""/>
+                           <p>海外购</p>
+                       </div>
+                   </div>
+
+               </div>
+               <div>
+                   <div>商城客户</div>
+                   <div class="row">
+                       <div class="col col-20 col-offset-10">
+                           <div class=" item-text-wrap  text-center">
+                               <img class="img-responsive"src="img/scyh3.png" alt=""/>
+                               <p>韩国代购</p>
+                           </div>
+                       </div>
+                       <div class="col col-20 col-offset-10">
+                           <div class=" item-text-wrap  text-center">
+                               <img class="img-responsive"src="img/scyh4.png" alt=""/>
+                               <p>ARC潮店</p>
+                           </div>
+                       </div>
+                       <div class="col col-20 col-offset-10">
+                           <div class=" item-text-wrap  text-center">
+                               <img class="img-responsive"src="img/scyh1.png" alt=""/>
+                               <p>欧力女装</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="product">
+               <div class="header">
+                   <b></b> <span>精选促销</span>
+                   <span class="rt">....</span>
+               </div>
+               <div class="list">
+                   <div class="row" ng-repeat="pro in product" ng-if="$index%2==0">
+                       <div class="col">
+                           <a class="" href="#/myDetail/{{pro.pid}}">
+                               <div>
+                                   <img class="img-responsive"ng-src="img/{{pro.img1}}" alt=""/>
+                                   <h5 >{{pro.name}}</h5>
+                               </div>
+                           </a>
+                           <p class="assertive">
+                               <span>{{product[$index+1].price | currency:'¥'}}</span>
+                               <button ng-click="addToCart(pro.pid)" class="button button-small button-clear button-assertive icon ion-ios-cart rt"></button>
+                           </p>
+                       </div>
+                       <div class="col"ng-if="$index+1<product.length">
+                           <a href="#/myDetail/{{product[$index+1].pid}}">
+                               <div>
+                                   <img class="img-responsive"ng-src="img/{{product[$index+1].img1}}" alt=""/>
+                                   <h5 >{{product[$index+1].name}}</h5>
+                               </div>
+                           </a>
+                           <p class="assertive">
+                               <span>{{product[$index+1].price | currency:'¥'}}</span>
+                               <button class="button button-small button-clear button-assertive icon ion-ios-cart rt"ng-click="addToCart(product[$index+1].pid)"></button>
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <ion-infinite-scroll ng-if="hasMore" immediate-check="false" on-infinite="loadMore()">
+
+           </ion-infinite-scroll>
+
+           <div class="card" ng-if="!hasMore">
+               <div class="item">
+                   没有更多数据可以加载了
+               </div>
+           </div>
+       </ion-content>
+</ion-side-menus>
